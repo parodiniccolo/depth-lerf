@@ -1,5 +1,5 @@
-# LERF: Language Embedded Radiance Fields
-This is the official implementation for [LERF](https://lerf.io).
+# Depth-LERF: Language Embedded Radiance Fields with Depth Supervision
+This is an implementation for [LERF](https://lerf.io) modified to handle depth supervision. Nerfacto base model has been changed to Depth-Nerfacto
 
 
 <div align='center'>
