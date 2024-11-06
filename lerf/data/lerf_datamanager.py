@@ -38,7 +38,7 @@ from lerf.data.utils.dino_dataloader import DinoDataloader
 from lerf.data.utils.pyramid_embedding_dataloader import PyramidEmbeddingDataloader
 from lerf.encoders.image_encoder import BaseImageEncoder
 from nerfstudio.data.datamanagers.base_datamanager import VanillaDataManager, VanillaDataManagerConfig
-
+from nerfstudio.data.datasets.depth_dataset import DepthDataset
 
 @dataclass
 class LERFDataManagerConfig(VanillaDataManagerConfig):
@@ -48,7 +48,7 @@ class LERFDataManagerConfig(VanillaDataManagerConfig):
     patch_stride_scaler: float = 0.5
 
 
-class LERFDataManager(VanillaDataManager):  # pylint: disable=abstract-method
+class LERFDataManager(VanillaDataManager[DepthDataset]):  # pylint: disable=abstract-method
     """Basic stored data manager implementation.
 
     This is pretty much a port over from our old dataloading utilities, and is a little jank
